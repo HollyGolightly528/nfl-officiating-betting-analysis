@@ -22,3 +22,14 @@ The input file must be sourced and validated first. This repository contains **n
 
 ## Important limitation
 Penalty frequency is not a measure of officiating accuracy. Playing style, opponents, situation, home field, and crew assignments may confound comparisons. Betting correlations cannot establish manipulation or intentional bias. An assessment of wrong or missed calls requires independent review of called **and uncalled** infractions.
+
+## Original officiating study (primary)
+- [Original study scope and prior exploratory claims](docs/ORIGINAL_OFFICIATING_STUDY.md)
+- [Analysis roadmap](docs/ANALYSIS_ROADMAP.md)
+- [Secondary betting study](docs/BETTING_SECONDARY_STUDY.md)
+
+Run the expanded original officiating report after importing verified data:
+```bash
+python scripts/officiating_report.py --input data/processed/team_game_penalties.csv --output outputs/officiating
+```
+The reporting script generates CSV tables and descriptive PNG charts; these are not yet populated because verified source data has not been ingested.
