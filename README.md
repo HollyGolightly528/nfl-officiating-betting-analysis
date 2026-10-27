@@ -33,3 +33,10 @@ Run the expanded original officiating report after importing verified data:
 python scripts/officiating_report.py --input data/processed/team_game_penalties.csv --output outputs/officiating
 ```
 The reporting script generates CSV tables and descriptive PNG charts; these are not yet populated because verified source data has not been ingested.
+
+## Regenerate the original workbook
+See [regeneration instructions](docs/REGENERATION_GUIDE.md). The new downloader retrieves **candidate** nflverse play-by-play files, not verified official accepted-penalty totals. Once an audited team-game CSV is created, run the reporting script and then:
+```bash
+python scripts/export_workbook.py --input-dir outputs/officiating --output outputs/nfl_penalty_analysis_2021_2025_regenerated.xlsx
+```
+The raw-to-verified-data transformation is not implemented yet; the workbook cannot be populated without it.
